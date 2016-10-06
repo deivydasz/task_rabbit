@@ -1,5 +1,6 @@
 
 = simple_form_for(@task, html: { class: 'form-horizontal'}) do |f|
+	= f.collection_select :category_id, Category.all, :id, :name, { prompt: "Choose a Category" }
 	= f.input :title, label: "Task title"
 	= f.input :description, label: "Task escription"
 	= f.input :company, label: "Your ompany"
